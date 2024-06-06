@@ -12,7 +12,11 @@ function PartnerTile({ partnerData }) {
       <img className="partner-thumbnail" src='' />
       <hr />
       <div className="partner-info">
-        This is some placeholder content - you'll need to replace the content here with actual partner information.
+        Partner Name
+        Partner Description
+        Partner Logo Source
+        Active?
+        Submit Button
       </div>
     </div>
   )
