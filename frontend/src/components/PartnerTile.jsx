@@ -12,9 +12,6 @@ function PartnerTile({ partnerData }) {
     <div className="partner-tile">
       <img className="partner-thumbnail" src='' />
       <hr />
-      <div className="partner-logo">
-        Partner Logo
-      </div>
       <div className="partner-name">
         Partner Name
       </div>

@@ -8,8 +8,15 @@
 
 #main-content {
   width: 1000px;
-  padding: 20px 30px;
-  margin: auto;
+  padding: 20px 30px
+}
+
+#add-partners-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 1rem;
 }
 
 #main-partners-grid {
@@ -73,6 +80,37 @@ h1.title {
   border: black;
   color: white;
   background-color: red;
+  font-size: 12px;
+  width: 20%;
+  object-position: bottom;
+}
+
+/* Add Data */
+
+.add-data {
+  width: 450px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+
+  padding: 25px;
+}
+
+.is-active {
+  display: block;
+  position: relation;
+}
+
+.submit-button {
+  border: black;
+  color: white;
+  background-color: green;
   font-size: 12px;
   width: 20%;
   object-position: bottom;

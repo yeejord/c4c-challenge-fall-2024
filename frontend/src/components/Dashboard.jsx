@@ -20,8 +20,10 @@ function Dashboard() {
 
   return (
     <div id="main-content">
-      <div id="main-partners-grid">
+      <div id="add-partners-box">
         <AddPartnerData />
+      </div>
+      <div id="main-partners-grid">
         <PartnerTile partnerData={{}} />
       </div>
     </div>
