@@ -54,4 +54,5 @@ function AddPartnerData({}) {
   )
 }
 
+
 export default AddPartnerData;

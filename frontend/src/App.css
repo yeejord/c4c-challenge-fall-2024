@@ -8,7 +8,10 @@
 
 #main-content {
   width: 1000px;
-  padding: 20px 30px
+  padding: 20px 30px;
+  align-items: center;
+  display: felx;
+
 }
 
 #add-partners-box {
@@ -16,6 +19,7 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
+
   margin-bottom: 1rem;
 }
 
@@ -40,6 +44,7 @@ h1.title {
 .partner-tile {
   width: 450px;
   height: 400px;
+  font-size: .9em;
 
   display: flex;
   flex-direction: column;
@@ -53,8 +58,8 @@ h1.title {
 }
 
 .partner-thumbnail {
-  max-width: 330px;
-  max-height: 150px;
+  max-width: 300px;
+  max-height: 100px;
 }
 
 .partner-info {
@@ -64,23 +69,26 @@ h1.title {
 .partner-name {
   color: black;
   font-weight: bold;
+  font-size: 8px;
 }
 
 .active-source {
   color: green;
   font-weight: bold;
+  font-size: 7px;
 }
 
 .partner-description {
   color: black;
-  font-weight: normal;
+  font-weight: light;
+  font-size: 6px;
 }
 
 .delete-button {
   border: black;
   color: white;
   background-color: red;
-  font-size: 12px;
+  font-size: 10px;
   width: 20%;
   object-position: bottom;
 }
