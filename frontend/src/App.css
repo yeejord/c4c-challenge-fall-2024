@@ -37,7 +37,7 @@ h1.title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  
 
   border: 1px solid #3d3d3d;
   border-radius: 12px;
@@ -52,4 +52,28 @@ h1.title {
 
 .partner-info {
   font-size: 0.9em;
+}
+
+.partner-name {
+  color: black;
+  font-weight: bold;
+}
+
+.active-source {
+  color: green;
+  font-weight: bold;
+}
+
+.partner-description {
+  color: black;
+  font-weight: normal;
+}
+
+.delete-button {
+  border: black;
+  color: white;
+  background-color: red;
+  font-size: 12px;
+  width: 20%;
+  object-position: bottom;
 }

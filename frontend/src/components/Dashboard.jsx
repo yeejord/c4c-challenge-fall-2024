@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PartnerTile from './PartnerTile';
+import AddPartnerData from './AddData';
 
 /*
   The top-level component containing everything relevant to the dashboard,
@@ -20,6 +21,7 @@ function Dashboard() {
   return (
     <div id="main-content">
       <div id="main-partners-grid">
+        <AddPartnerData />
         <PartnerTile partnerData={{}} />
       </div>
     </div>
