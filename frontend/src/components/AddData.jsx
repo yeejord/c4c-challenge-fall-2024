@@ -7,16 +7,24 @@ import React from 'react';
 
 function AddPartnerData({}) {
   
+    const [partnerName, setPartnerName]=useState ("");
+    const [partnerDescription, setPartnerDescription]=useState ("");
+    const [partnerLogoSource, setLogoSource]=useState ("");
+    const handleSubmit=() =>{};
+
   return (
 
-    <div className="add-data">
+    <form className="add-data"onSubmit={handleSubmit}>
         <label for="partner-name">
             Partner Name
         </label>
         <input 
             type="text" 
             id="partner-name" 
-            name="partner-name">
+            name="partner-name"
+            required
+            value={partnerName}
+            onChange={() => setPartnerName(event.target.value)}>
         </input>
 
         <label for="partner-description">
@@ -25,7 +33,10 @@ function AddPartnerData({}) {
         <input 
             type="text" 
             id="partner-description" 
-            name="partner-description">
+            name="partner-description"
+            required
+            value={partnerDescription}
+            onChange={() => setPartnerDescription(event.target.value)}>
         </input>
 
         <label for="partner-logo-source">
@@ -34,7 +45,10 @@ function AddPartnerData({}) {
         <input 
             type="url" 
             id="partner-logo-source" 
-            name="partner-logo-source">
+            name="partner-logo-source"
+            required
+            value={partnerLogoSource}
+            onChange={() => setPartnerLogoSource(event.target.value)}>
         </input>
 
         <label for="is-active">
@@ -46,10 +60,10 @@ function AddPartnerData({}) {
         </input>
         </label>
 
-        <button class="submit-button">
+        <button class="submit-button" onClick={() =>handleSubmit()}>
             Submit
         </button>
-    </div>
+    </form>
 
   )
 }
