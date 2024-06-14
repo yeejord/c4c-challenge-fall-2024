@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 /*
   A block where you add information for a new partner whose
@@ -7,14 +8,26 @@ import React from 'react';
 
 function AddPartnerData({}) {
   
-    const [partnerName, setPartnerName]=useState ("");
-    const [partnerDescription, setPartnerDescription]=useState ("");
-    const [partnerLogoSource, setLogoSource]=useState ("");
-    const handleSubmit=() =>{};
+    const [partnerName, setPartnerName]=useState("");
+    const [partnerDescription, setPartnerDescription]=useState("");
+    const [partnerLogoSource, setPartnerLogoSource]=useState("");
+    const [activity, setActivity]=useState("Not Active");
+    const handleSubmit=async() =>{const response=await 
+        fetch(`http://localhost:4000`, 
+            {method: `POST`, body:JSON.stringify({
+                thumbnailUrl:partnerLogoSource,
+                name:partnerName,
+                description:partnerDescription,
+                active:activity,
+            }),
+        })
+        console.log(response.status);
+    };
 
   return (
 
-    <form className="add-data"onSubmit={handleSubmit}>
+    <form className="add-data"onSubmit={handleSubmit}
+    name="add-data">
         <label for="partner-name">
             Partner Name
         </label>
@@ -56,11 +69,14 @@ function AddPartnerData({}) {
         <input 
             type="checkbox" 
             id="is-active" 
-            name="is-active">
+            name="is-active"
+            checked={activity=="Active"}
+            value={activity}
+            onChange={() => {if(value=="Not Active") {setActivity("Active")} else {setActivity("Not Active")}}}>
         </input>
         </label>
 
-        <button class="submit-button" onClick={() =>handleSubmit()}>
+        <button className="submit-button" onClick={() =>handleSubmit()}>
             Submit
         </button>
     </form>

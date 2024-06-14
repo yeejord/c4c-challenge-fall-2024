@@ -38,6 +38,16 @@ app.get('/', (req, res) => {
   res.status(200).send(partners);
 })
 
+app.post('/', (req, res) => {
+  res.status(200);
+  partners.push({thumbnailUrl:req.thumbnailUrl,
+    name:req.name,
+    description:req.description,
+    active:req.active,
+  })
+  console.log.partners;
+})
+
 // Start the backend
 app.listen(port, () => {
   console.log(`Express server starting on port ${port}!`);
